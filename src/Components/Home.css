@@ -1,0 +1,28 @@
+.home__row {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+}
+.home__row::-webkit-scrollbar {
+  display: none;
+}
+.home__card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 200px;
+  transition: transform 450ms;
+  margin: 10px;
+}
+
+.home__card:hover {
+  transform: scale(1.08);
+  opacity: 1;
+}
+.home__card > img {
+  height: 135px;
+}
