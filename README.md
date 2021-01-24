@@ -1,10 +1,8 @@
-## Wireframe Link
-link: https://www.figma.com/proto/4VLRhoOASlCFjEcYzuZa36/lyrics_finder?node-id=2%3A0&scaling=contain
 
 ## Deployment Link
 
 Deploy your project on Netlify/GitHub pages/etc and put your deployed link here.
-Link:
+Link:  https://pesto-students.github.io/lyrics-finder-RenuSuresh/
 
 # Instruction
 
