@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+.header__name {
+  font-family: "Oleo Script", sans-serif;
+  font-size: 70px;
+  color: #680101;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  margin-bottom: 20px;
+}
+.header__search {
+  display: flex;
+  justify-content: center;
+  width: 360px;
+}
+.header__input__search {
+  width: 180px;
+  box-sizing: border-box;
+  border-radius: 4px 0px 0px 4px;
+  font-size: 16px;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 20px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  float: right;
+  outline: none;
+}
+.header__input__search:focus {
+  width: 80%;
+}
+.header__searchbtn {
+  width: 50px;
+  background-color: #680101;
+  color: #fff;
+}
