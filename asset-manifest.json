@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/lyrics-finder-RenuSuresh/static/css/main.1208fcbe.chunk.css",
-    "main.js": "/lyrics-finder-RenuSuresh/static/js/main.3f77dd4f.chunk.js",
-    "main.js.map": "/lyrics-finder-RenuSuresh/static/js/main.3f77dd4f.chunk.js.map",
-    "runtime-main.js": "/lyrics-finder-RenuSuresh/static/js/runtime-main.46beb587.js",
-    "runtime-main.js.map": "/lyrics-finder-RenuSuresh/static/js/runtime-main.46beb587.js.map",
-    "static/js/2.9b9b6360.chunk.js": "/lyrics-finder-RenuSuresh/static/js/2.9b9b6360.chunk.js",
-    "static/js/2.9b9b6360.chunk.js.map": "/lyrics-finder-RenuSuresh/static/js/2.9b9b6360.chunk.js.map",
-    "static/js/3.c389d9ec.chunk.js": "/lyrics-finder-RenuSuresh/static/js/3.c389d9ec.chunk.js",
-    "static/js/3.c389d9ec.chunk.js.map": "/lyrics-finder-RenuSuresh/static/js/3.c389d9ec.chunk.js.map",
+    "main.css": "/lyrics-finder-RenuSuresh/static/css/main.ad3e8cdc.chunk.css",
+    "main.js": "/lyrics-finder-RenuSuresh/static/js/main.fe2c324f.chunk.js",
+    "main.js.map": "/lyrics-finder-RenuSuresh/static/js/main.fe2c324f.chunk.js.map",
+    "runtime-main.js": "/lyrics-finder-RenuSuresh/static/js/runtime-main.c89efebd.js",
+    "runtime-main.js.map": "/lyrics-finder-RenuSuresh/static/js/runtime-main.c89efebd.js.map",
+    "static/js/2.fbc752a2.chunk.js": "/lyrics-finder-RenuSuresh/static/js/2.fbc752a2.chunk.js",
+    "static/js/2.fbc752a2.chunk.js.map": "/lyrics-finder-RenuSuresh/static/js/2.fbc752a2.chunk.js.map",
+    "static/js/3.09c03f4c.chunk.js": "/lyrics-finder-RenuSuresh/static/js/3.09c03f4c.chunk.js",
+    "static/js/3.09c03f4c.chunk.js.map": "/lyrics-finder-RenuSuresh/static/js/3.09c03f4c.chunk.js.map",
     "index.html": "/lyrics-finder-RenuSuresh/index.html",
-    "static/css/main.1208fcbe.chunk.css.map": "/lyrics-finder-RenuSuresh/static/css/main.1208fcbe.chunk.css.map",
-    "static/js/2.9b9b6360.chunk.js.LICENSE.txt": "/lyrics-finder-RenuSuresh/static/js/2.9b9b6360.chunk.js.LICENSE.txt"
+    "static/css/main.ad3e8cdc.chunk.css.map": "/lyrics-finder-RenuSuresh/static/css/main.ad3e8cdc.chunk.css.map",
+    "static/js/2.fbc752a2.chunk.js.LICENSE.txt": "/lyrics-finder-RenuSuresh/static/js/2.fbc752a2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.46beb587.js",
-    "static/js/2.9b9b6360.chunk.js",
-    "static/css/main.1208fcbe.chunk.css",
-    "static/js/main.3f77dd4f.chunk.js"
+    "static/js/runtime-main.c89efebd.js",
+    "static/js/2.fbc752a2.chunk.js",
+    "static/css/main.ad3e8cdc.chunk.css",
+    "static/js/main.fe2c324f.chunk.js"
   ]
 }
