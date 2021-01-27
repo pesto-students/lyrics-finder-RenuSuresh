@@ -1,0 +1,14 @@
+.modal-title {
+  float: left;
+}
+.modal-body > p {
+  font-size: 14px;
+  font-family: monospace;
+  color: black;
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 783px;
+    margin: 1.75rem auto;
+  }
+}
