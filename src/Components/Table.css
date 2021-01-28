@@ -1,3 +1,8 @@
+.table__background {
+  height: fit-content;
+  background-color: #360000;
+  background-image: linear-gradient(to right, #d88b17, #6e6726);
+}
 .table__div {
   display: flex;
   flex-direction: column;
@@ -11,11 +16,16 @@ p {
   font-family: cursive;
   color: #360000;
 }
+.table__table {
+  /* width: 700px; */
+  display: flex;
+  justify-content: center;
+}
 table {
   border: 1px solid #ccc;
   border-collapse: collapse;
   padding: 0;
-  width: 60%;
+  /* width: 60%; */
   table-layout: fixed;
   margin: 0 auto;
 }
@@ -34,7 +44,6 @@ table tr {
 table th,
 table td {
   padding: 0.625em;
-  text-align: center;
 }
 
 table th {
@@ -86,4 +95,20 @@ table th {
   table td:last-child {
     border-bottom: 0;
   }
+}
+
+tbody tr:hover {
+  background-color: #d6d6d6;
+}
+.table__info {
+  display: flex;
+  flex-direction: column;
+}
+.table__title {
+  font-size: small;
+}
+.table__album {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  font-weight: 600;
 }

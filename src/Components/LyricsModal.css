@@ -1,6 +1,10 @@
 .modal-title {
   float: left;
 }
+.modal-body {
+  display: flex;
+  justify-content: center;
+}
 .modal-body > p {
   font-size: 14px;
   font-family: monospace;
@@ -11,4 +15,9 @@
     max-width: 783px;
     margin: 1.75rem auto;
   }
+}
+
+.modal__error {
+  width: 200px;
+  height: 200px;
 }
