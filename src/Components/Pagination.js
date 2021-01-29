@@ -1,14 +1,20 @@
 import React from "react";
+import "./Pagination.css";
 
 function Pagination({ genrePerPage, totalGenre, paginate }) {
-  const pageNumber = [];
+  const getPageNumber = (genrePerPage, totalGenre) => {
+    const pageNumber = [];
 
-  for (let i = 1; i <= Math.ceil(totalGenre / genrePerPage); i++) {
-    pageNumber.push(i);
-  }
+    for (let i = 1; i <= Math.ceil(totalGenre / genrePerPage); i++) {
+      pageNumber.push(i);
+    }
+    return pageNumber;
+  };
+
+  const pageNumber = getPageNumber(genrePerPage, totalGenre);
 
   return (
-    <nav>
+    <nav className="pagination__nav">
       <ul className="pagination">
         {pageNumber.map((number) => (
           <li key={number} className="page-item">

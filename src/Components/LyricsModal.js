@@ -3,24 +3,10 @@ import "./LyricsModal.css";
 import $ from "jquery";
 import "bootstrap";
 import "popper.js";
-import { lyricsInstance } from "../axios";
-import axios from "axios";
+import { getLyrics } from "../axios";
+import logo from "./../assets/Dog-swimming.png";
 
-function LyricsModal({ artist, title }) {
-  const [lyrics, setLyrics] = useState("");
-  useEffect(() => {
-    const artistTitle = `${artist}/${title}`;
-    async function fetchLyrics() {
-      const request = await lyricsInstance.get(artistTitle);
-      setLyrics(request.data);
-      return request;
-    }
-    fetchLyrics();
-    $(document).ready(function () {
-      $("#myModal").modal("show");
-    });
-  }, [artist, title]);
-  console.log("lyrics>>>>", lyrics);
+function Modal({ children, artist }) {
   return (
     <div className="modal fade" id="myModal" role="dialog">
       <div className="modal-dialog">
@@ -31,9 +17,7 @@ function LyricsModal({ artist, title }) {
               &times;
             </button>
           </div>
-          <div className="modal-body">
-            <p>{lyrics.lyrics}</p>
-          </div>
+          <div className="modal-body">{children}</div>
           <div className="modal-footer">
             <button
               type="button"
@@ -46,6 +30,41 @@ function LyricsModal({ artist, title }) {
         </div>
       </div>
     </div>
+  );
+}
+
+function LyricsModal({ artist, title }) {
+  const [lyrics, setLyrics] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const artistTitle = `${artist}/${title}`;
+    async function fetchLyrics() {
+      const request = await getLyrics.get(artistTitle);
+
+      setLyrics(request.data);
+      return request;
+    }
+
+    fetchLyrics();
+
+    $(document).ready(function () {
+      $("#myModal").modal("show");
+    });
+  }, [artist, title]);
+
+  return (
+    <>
+      {lyrics.lyrics ? (
+        <Modal artist={artist}>
+          <p>{lyrics.lyrics}</p>
+        </Modal>
+      ) : (
+        <Modal artist={artist}>
+          <img src={logo} className="modal__error" />
+        </Modal>
+      )}
+    </>
   );
 }
 

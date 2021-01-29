@@ -1,63 +1,85 @@
 import React, { useEffect, useState } from "react";
 import "./Table.css";
-import { instance } from "../axios";
+import { getSuggest } from "../axios";
 import LyricsModal from "./LyricsModal";
 import Pagination from "./Pagination";
+import BeatLoader from "react-spinners/BeatLoader";
 
-function Table({ musicType }) {
+function TableData({ currentGenre, getLyrics }) {
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Artist</th>
+        </tr>
+      </thead>
+      <tbody>
+        {currentGenre.map((Element) => (
+          <tr
+            key={Element.id}
+            onClick={() => getLyrics(Element.artist.name, Element.title)}
+          >
+            <td>
+              <img src={Element.album.cover_small} />
+            </td>
+            <td className="table__info">
+              <span className="table__album">{Element.album.title}</span>
+              <span className="table__title">{Element.title}</span>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+}
+
+function Table({ musicType, hideTable }) {
   const [genre, setGenre] = useState([]);
   const [artist, setArtist] = useState("");
   const [title, setTitle] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [genrePerPage] = useState(5);
+  const [loading, setLoading] = useState(true);
+
+  // get current data
+  const indexOfLastGenre = currentPage * genrePerPage;
+  const indexOfFirstGenre = indexOfLastGenre - genrePerPage;
+  const currentGenre = genre.slice(indexOfFirstGenre, indexOfLastGenre);
+
+  // change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   useEffect(() => {
     async function fetchData() {
-      const request = await instance.get(musicType);
+      const request = await getSuggest.get(musicType);
+
       setGenre(request.data.data);
+      setLoading(false);
       return request;
     }
     fetchData();
   }, [musicType]);
-  console.log("genre>>>>", genre[0]);
 
   const getLyrics = (artist, title) => {
     setTitle(title);
     setArtist(artist);
   };
 
-  // get current data
-  const indexOfLastGenre = currentPage * genrePerPage;
-  const indexOfFirstGenre = indexOfLastGenre - genrePerPage;
-  const currentPost = genre.slice(indexOfFirstGenre, indexOfLastGenre);
-
-  // change page
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
   return (
     <div className="table__div">
+      <button type="button" className="close" onClick={hideTable}>
+        &times;
+      </button>
       <p>{musicType}</p>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Artist</th>
-          </tr>
-        </thead>
-        <tbody>
-          {currentPost.map((Element) => (
-            <tr
-              key={Element.id}
-              onClick={() => getLyrics(Element.artist.name, Element.title)}
-            >
-              <td>
-                <img src={Element.album.cover_small} />
-              </td>
-              <td>{Element.title}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+
+      <div className="table__table">
+        {loading ? (
+          <BeatLoader loading={loading} />
+        ) : (
+          <TableData currentGenre={currentGenre} getLyrics={getLyrics} />
+        )}
+      </div>
       <Pagination
         genrePerPage={genrePerPage}
         totalGenre={genre.length}

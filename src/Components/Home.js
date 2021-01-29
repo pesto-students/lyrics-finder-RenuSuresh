@@ -6,8 +6,10 @@ import Table from "./Table";
 function Home() {
   const [musicType, setMusicType] = useState("");
   const handleClick = (music) => {
-    console.log("music type is >>>>", music);
     setMusicType(music.type);
+  };
+  const hideTable = () => {
+    setMusicType("");
   };
   return (
     <div className="home">
@@ -23,7 +25,7 @@ function Home() {
           </div>
         ))}
       </div>
-      {musicType && <Table musicType={musicType} />}
+      {musicType && <Table musicType={musicType} hideTable={hideTable} />}
     </div>
   );
 }
