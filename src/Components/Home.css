@@ -17,6 +17,7 @@
   width: 200px;
   transition: transform 450ms;
   margin: 10px;
+  padding: 7px;
 }
 
 .home__card:hover {
@@ -25,4 +26,11 @@
 }
 .home__card > img {
   height: 135px;
+}
+
+label {
+  font-family: "Abel";
+  font-size: 24px;
+  font-weight: 600;
+  color: #860264;
 }

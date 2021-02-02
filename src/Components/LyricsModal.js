@@ -1,68 +1,103 @@
 import React, { useEffect, useState } from "react";
 import "./LyricsModal.css";
-import $ from "jquery";
 import "bootstrap";
 import "popper.js";
 import { getLyrics } from "../axios";
 import logo from "./../assets/Dog-swimming.png";
+import BeatLoader from "react-spinners/BeatLoader";
+import Modal from "react-modal";
 
-function Modal({ children, artist }) {
+function OpenModal({
+  modalIsOpen,
+  children,
+  artist,
+  closeModal,
+  image,
+  album_title,
+}) {
   return (
-    <div className="modal fade" id="myModal" role="dialog">
-      <div className="modal-dialog">
-        <div className="modal-content">
-          <div className="modal-header">
-            <h4 className="modal-title">{artist}</h4>
-            <button type="button" className="close" data-dismiss="modal">
-              &times;
-            </button>
-          </div>
-          <div className="modal-body">{children}</div>
-          <div className="modal-footer">
-            <button
-              type="button"
-              className="btn btn-default"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-          </div>
+    <>
+      <Modal isOpen={modalIsOpen} style={customStyles}>
+        <div className="modal__header">
+          <img src={image} alt="album" />
+          <h5>{album_title}</h5>
+
+          <i className=" fa-compact-dics"></i>
+          <i className="fa fa-search"></i>
+          <i className="album_icon"></i>
+
+          <h6 className="modal-title">{artist}</h6>
         </div>
-      </div>
-    </div>
+        <button type="button" className="modal__close" onClick={closeModal}>
+          &times;
+        </button>
+        <hr className="modal__hr" />
+      </Modal>
+    </>
   );
 }
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+    height: "500px",
+    width: "820px",
+  },
+};
 
-function LyricsModal({ artist, title }) {
+function LyricsModal({ artist, title, album_title, image }) {
   const [lyrics, setLyrics] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  const [modalIsOpen, setModalIsOpen] = useState(true);
 
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
   useEffect(() => {
     const artistTitle = `${artist}/${title}`;
+    setModalIsOpen(true);
+    <BeatLoader loading="true" />;
     async function fetchLyrics() {
       const request = await getLyrics.get(artistTitle);
-
       setLyrics(request.data);
+      <BeatLoader loading="false" />;
+
       return request;
     }
 
     fetchLyrics();
-
-    $(document).ready(function () {
-      $("#myModal").modal("show");
-    });
   }, [artist, title]);
 
   return (
     <>
+      <div>{album_title}</div>
       {lyrics.lyrics ? (
-        <Modal artist={artist}>
+        <OpenModal
+          artist={artist}
+          modalIsOpen={modalIsOpen}
+          closeModal={closeModal}
+          image={image}
+          ariaHideApp={false}
+          album_title={album_title}
+        >
           <p>{lyrics.lyrics}</p>
-        </Modal>
+        </OpenModal>
       ) : (
-        <Modal artist={artist}>
-          <img src={logo} className="modal__error" />
-        </Modal>
+        <OpenModal
+          artist={artist}
+          modalIsOpen={modalIsOpen}
+          closeModal={closeModal}
+          image={image}
+          ariaHideApp={false}
+          album_title={album_title}
+        >
+          <img src={logo} className="modal__error" alt="error" />
+          <p>Sorry no Lyrics Found!!!</p>
+        </OpenModal>
       )}
     </>
   );

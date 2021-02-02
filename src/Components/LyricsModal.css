@@ -4,11 +4,14 @@
 .modal-body {
   display: flex;
   justify-content: center;
+  flex-flow: column;
+  align-items: center;
 }
 .modal-body > p {
   font-size: 14px;
   font-family: monospace;
   color: black;
+  text-shadow: none;
 }
 @media (min-width: 576px) {
   .modal-dialog {
@@ -20,4 +23,35 @@
 .modal__error {
   width: 200px;
   height: 200px;
+}
+.modal__close {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.5;
+  background-color: #fff;
+  border: none;
+}
+.ReactModal__Content::-webkit-scrollbar {
+  display: none;
+}
+
+.modal__hr {
+  position: relative;
+  margin-top: 11%;
+}
+.modal__header > img {
+  max-height: 100px;
+  max-width: 100px;
+}
+.modal__header {
+  display: flex;
+  flex-direction: column;
+}
+
+.album_icon {
+  content: "\f89f";
 }

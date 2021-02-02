@@ -3,12 +3,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 40vh;
 }
 .header__name {
   font-family: "Oleo Script", sans-serif;
   font-size: 70px;
-  color: #680101;
+  color: #822f9d;
   /* display: flex;
   justify-content: center;
   align-items: center; */
@@ -37,6 +37,6 @@
 }
 .header__searchbtn {
   width: 50px;
-  background-color: #680101;
+  background-color: #822f9d;
   color: #fff;
 }
