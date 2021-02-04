@@ -41,7 +41,7 @@
 
 .modal__hr {
   position: relative;
-  margin-top: 11%;
+  margin-top: 1%;
 }
 .modal__header > img {
   max-height: 100px;
@@ -49,9 +49,7 @@
 }
 .modal__header {
   display: flex;
-  flex-direction: column;
 }
-
-.album_icon {
-  content: "\f89f";
+.modal__artist__details {
+  margin-left: 5px;
 }
