@@ -5,7 +5,6 @@
 }
 .table__div {
   display: flex;
-  flex-direction: column;
   justify-content: center;
 }
 p {
@@ -14,10 +13,9 @@ p {
   font-size: 40px;
   font-weight: 600;
   font-family: cursive;
-  color: #360000;
+  text-shadow: 0 0 14px #d88b17;
 }
 .table__table {
-  /* width: 700px; */
   display: flex;
   justify-content: center;
 }
@@ -28,6 +26,10 @@ table {
   /* width: 60%; */
   table-layout: fixed;
   margin: 0 auto;
+  min-width: fit-content;
+  margin: 25px;
+  /* box-shadow: 0 4px 8px 0 red, 0 4px 8px 0 red; */
+  box-shadow: 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(237, 172, 141, 0.8);
 }
 
 table caption {
@@ -109,6 +111,33 @@ tbody tr:hover {
 }
 .table__album {
   font-family: "Courier New", Courier, monospace;
-  font-size: 13px;
+  font-size: 17px;
   font-weight: 600;
+}
+.table__img__col {
+  width: 15%;
+}
+.table__caption {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
+}
+.table__caption > p {
+  color: #eeeaf0;
+  border-bottom: 3px double #ffffff;
+}
+.table__div__border {
+  border: 5px double white;
+  width: 60%;
+}
+.close {
+  color: white;
+  font-size: xxx-large;
+  margin-right: 15px;
+  opacity: 1;
+}
+.close:hover {
+  color: #ffc766;
+  outline: none;
 }

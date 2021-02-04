@@ -1,6 +1,4 @@
 .app {
-  background-image: url("https://i.pinimg.com/originals/57/9a/01/579a01d9524c06acdfdfcf283357db63.jpg");
-  background-position: center;
-  /* height: 100vh; */
-  background-size: auto;
+  min-height: 100vh;
+  background-color: #181717;
 }

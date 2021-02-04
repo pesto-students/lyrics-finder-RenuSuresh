@@ -1,16 +1,16 @@
 import React from "react";
 import "./Pagination.css";
 
+const getPageNumber = (genrePerPage, totalGenre) => {
+  const pageNumber = [];
+
+  for (let i = 1; i <= Math.ceil(totalGenre / genrePerPage); i++) {
+    pageNumber.push(i);
+  }
+  return pageNumber;
+};
+
 function Pagination({ genrePerPage, totalGenre, paginate }) {
-  const getPageNumber = (genrePerPage, totalGenre) => {
-    const pageNumber = [];
-
-    for (let i = 1; i <= Math.ceil(totalGenre / genrePerPage); i++) {
-      pageNumber.push(i);
-    }
-    return pageNumber;
-  };
-
   const pageNumber = getPageNumber(genrePerPage, totalGenre);
 
   return (

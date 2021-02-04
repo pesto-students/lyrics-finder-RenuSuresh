@@ -21,7 +21,7 @@ function Home() {
             key={music.id}
           >
             <img src={music.image} alt={music.type} />
-            <h1>{music.type}</h1>
+            <label>{music.type}</label>
           </div>
         ))}
       </div>
