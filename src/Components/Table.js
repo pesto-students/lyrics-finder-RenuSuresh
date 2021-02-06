@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
-import "./Table.css";
-import { getSuggest } from "../axios";
+import "../assets/css/Table.css";
+import { getSuggest } from "../services/API/axios";
 import LyricsModal from "./LyricsModal";
 import Pagination from "./Pagination";
 import BeatLoader from "react-spinners/BeatLoader";
@@ -13,8 +13,8 @@ function SearchResult() {
   const [image, setImage] = useState("");
   const [albumTitle, setAlbumTitle] = useState("");
 
-  const value = useContext(GenreContext);
-  const currentGenre = value.currentGenre;
+  const currentGenreContextValue = useContext(GenreContext);
+  const currentGenre = currentGenreContextValue.currentGenre;
 
   const getLyrics = (artist, title, album_title, image) => {
     setTitle(title);

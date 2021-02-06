@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./Home.css";
-import { homeTiles } from "../properties";
+import "../assets/css/Home.css";
+import { homeTiles } from "../services/constant/properties";
 import Table from "./Table";
 
 function Home() {
