@@ -4,8 +4,8 @@ import Header from "./Header";
 
 function MainBody() {
   const [showHome, setShowHome] = useState(true);
-  const toggleHome = () => {
-    setShowHome(!showHome);
+  const toggleHome = (event = true) => {
+    setShowHome(event);
   };
   return (
     <div>

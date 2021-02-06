@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
-import "./LyricsModal.css";
+import "../assets/css/LyricsModal.css";
 import "bootstrap";
 import "popper.js";
-import { getLyrics } from "../axios";
+import { getLyrics } from "../services/API/axios";
 import logo from "./../assets/Dog-swimming.png";
 import BeatLoader from "react-spinners/BeatLoader";
-import { default as ReactModal } from "react-modal";
+import ReactModal from "react-modal";
 
 const ModalContext = React.createContext(null);
 
@@ -22,9 +22,9 @@ const customStyles = {
   },
 };
 function Modal({ children }) {
-  const value = useContext(ModalContext);
-  console.log(typeof value);
-  const { artist, modalIsOpen, closeModal, image, album_title } = value;
+  const ModalContent = useContext(ModalContext);
+
+  const { artist, modalIsOpen, closeModal, image, album_title } = ModalContent;
   return (
     <>
       <ReactModal isOpen={modalIsOpen} style={customStyles}>
@@ -53,7 +53,7 @@ function LyricsModal({ artist, title, album_title, image, setArtistEmpty }) {
   const [lyrics, setLyrics] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [modalIsOpen, setModalIsOpen] = useState(true);
-  console.log("modal >>>", artist);
+
   const closeModal = () => {
     setArtistEmpty();
     setModalIsOpen(false);

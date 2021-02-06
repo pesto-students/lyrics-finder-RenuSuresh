@@ -1,5 +1,5 @@
 import React from "react";
-import "./Pagination.css";
+import "../assets/css/Pagination.css";
 
 const getPageNumber = (genrePerPage, totalGenre) => {
   const pageNumber = [];
