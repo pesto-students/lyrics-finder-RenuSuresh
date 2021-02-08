@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home snapshot <Home/> 1`] = `
+<Home>
+  <div
+    className="home"
+  >
+    <div
+      className="home__row"
+    >
+      <div
+        className="home__card"
+        data-testid="card-1"
+        key="1"
+        onClick={[Function]}
+      >
+        <img
+          alt="Popular Music"
+          src="https://music.usc.edu/files/2016/07/PopularMusic_10_Header.jpg"
+        />
+        <label>
+          Popular Music
+        </label>
+      </div>
+      <div
+        className="home__card"
+        data-testid="card-2"
+        key="2"
+        onClick={[Function]}
+      >
+        <img
+          alt="Rock"
+          src="https://akm-img-a-in.tosshub.com/indiatoday/music-day-story,-facebook_647_062116084641.jpg?wqTCLtMqwQpeuevah3aCZLvcopVtZz24&size=770:433"
+        />
+        <label>
+          Rock
+        </label>
+      </div>
+      <div
+        className="home__card"
+        data-testid="card-3"
+        key="3"
+        onClick={[Function]}
+      >
+        <img
+          alt="Classical"
+          src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Sawai.jpg"
+        />
+        <label>
+          Classical
+        </label>
+      </div>
+      <div
+        className="home__card"
+        data-testid="card-4"
+        key="4"
+        onClick={[Function]}
+      >
+        <img
+          alt="Soul music"
+          src="https://mediad.publicbroadcasting.net/p/shared/npr/styles/x_large/nprshared/201902/698639816.jpg"
+        />
+        <label>
+          Soul music
+        </label>
+      </div>
+      <div
+        className="home__card"
+        data-testid="card-5"
+        key="5"
+        onClick={[Function]}
+      >
+        <img
+          alt="Country music"
+          src="https://www.cmuse.org/wp-content/uploads/2020/06/Characteristics-of-Country-Music.jpg"
+        />
+        <label>
+          Country music
+        </label>
+      </div>
+      <div
+        className="home__card"
+        data-testid="card-6"
+        key="6"
+        onClick={[Function]}
+      >
+        <img
+          alt="Orchestra"
+          src="https://www.grammy.com/sites/com/files/styles/twitter_image/public/chicagosymphonyorchestra_toddrosenberg.jpg?itok=lgnURVxN"
+        />
+        <label>
+          Orchestra
+        </label>
+      </div>
+      <div
+        className="home__card"
+        data-testid="card-7"
+        key="7"
+        onClick={[Function]}
+      >
+        <img
+          alt="Folk Music"
+          src="https://www.liveabout.com/thmb/GTjEPzMYKvwiEcU25JZeonzKYwA=/1500x1000/filters:no_upscale():max_bytes(150000):strip_icc()/TheAlmanacSingers-5902520f3df78c5456c436a1.jpg"
+        />
+        <label>
+          Folk Music
+        </label>
+      </div>
+      <div
+        className="home__card"
+        data-testid="card-8"
+        key="8"
+        onClick={[Function]}
+      >
+        <img
+          alt="Heavy Metal"
+          src="https://media.npr.org/assets/img/2019/07/15/murder-falcon_wide-6a7466500034276836ba06a964a01981181c0817-s800-c85.jpg"
+        />
+        <label>
+          Heavy Metal
+        </label>
+      </div>
+    </div>
+  </div>
+</Home>
+`;

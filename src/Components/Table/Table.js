@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useContext } from "react";
-import "../assets/css/Table.css";
-import { getSuggest } from "../services/API/axios";
-import LyricsModal from "./LyricsModal";
-import Pagination from "./Pagination";
+import "./Table.css";
+import { getSuggest } from "../../services/API/axios";
+import LyricsModal from "../LyricsModal/LyricsModal";
+import Pagination from "../Pagination/Pagination";
 import BeatLoader from "react-spinners/BeatLoader";
 
 const GenreContext = React.createContext(null);
@@ -30,7 +30,7 @@ function SearchResult() {
   }
   return (
     <>
-      <table>
+      <table data-testid="home-table">
         <tbody>
           {currentGenre.map((Element) => (
             <tr
@@ -43,6 +43,7 @@ function SearchResult() {
                   Element.artist.picture_medium
                 )
               }
+              data-testid={`row-${Element.id}`}
             >
               <td className="table__img__col">
                 <img src={Element.album.cover_small} alt="album" />
@@ -72,11 +73,16 @@ function SearchResult() {
 function TableData({ hideTable, musicType, loading }) {
   return (
     <>
-      <button type="button" className="close" onClick={hideTable}>
+      <button
+        type="button"
+        className="close"
+        onClick={hideTable}
+        data-testid="close-btn"
+      >
         &times;
       </button>
       <div className="table__caption">
-        <p>{musicType}</p>
+        <p data-testid="table-musictype">{musicType}</p>
       </div>
 
       <div className="table__table">

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "../assets/css/Header.css";
-import Table from "./Table";
+import "./Header.css";
+import Table from "../Table/Table";
 
 function Header({ toggleHome }) {
   const [search, setSearch] = useState("");
@@ -37,9 +37,14 @@ function Header({ toggleHome }) {
                 setIsError(false);
               }}
               value={search}
+              data-testid="header-search"
             />
 
-            <button className="header__searchbtn" onClick={getSearch}>
+            <button
+              className="header__searchbtn"
+              onClick={getSearch}
+              data-testid="search-btn"
+            >
               <i className="fa fa-search"></i>
             </button>
           </div>
@@ -50,6 +55,7 @@ function Header({ toggleHome }) {
                 fontSize: "12px",
                 marginTop: "1%",
               }}
+              data-testid="error-text"
             >
               * This field is required.
             </p>

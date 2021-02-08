@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header snapshot <Header/> 1`] = `
+<Header>
+  <div>
+    <div
+      className="header"
+    >
+      <p
+        className="header__name font-effect-shadow-multiple"
+      >
+        Lyrics Finder
+      </p>
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "flexDirection": "column",
+          }
+        }
+      >
+        <div
+          className="header__search"
+        >
+          <input
+            className="header__input__search"
+            data-testid="header-search"
+            name="search"
+            onChange={[Function]}
+            placeholder="Search by Artist/ Song"
+            value=""
+          />
+          <button
+            className="header__searchbtn"
+            data-testid="search-btn"
+            onClick={[Function]}
+          >
+            <i
+              className="fa fa-search"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</Header>
+`;
