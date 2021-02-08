@@ -44,3 +44,15 @@ The above API does not return data when it is under load. You are free to look f
 # Commands
 
 - Run `npm run develop` to run app locally (if you are using pure html+css+JS) otherwise use create-react-app.
+
+# website view
+![image](https://user-images.githubusercontent.com/34194473/107192585-cfe8de80-6a13-11eb-8106-f3211a91edd4.png)
+
+# Search Table
+
+![image](https://user-images.githubusercontent.com/34194473/107193725-299dd880-6a15-11eb-8500-a0dcb3ed99e1.png)
+
+# Modal
+![image](https://user-images.githubusercontent.com/34194473/107193960-7386be80-6a15-11eb-94b2-f8d27b78c93a.png)
+
+
