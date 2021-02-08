@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Home from "./Home";
-import Header from "./Header";
+import Home from "../Home/Home";
+import Header from "../Header/Header";
 
 function MainBody() {
   const [showHome, setShowHome] = useState(true);

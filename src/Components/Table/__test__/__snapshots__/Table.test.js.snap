@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table snapshot <Table/> 1`] = `
+<Table>
+  <div
+    className="table__div"
+  >
+    <div
+      className="table__div__border"
+    >
+      <TableData
+        loading={true}
+      >
+        <button
+          className="close"
+          data-testid="close-btn"
+          type="button"
+        >
+          ×
+        </button>
+        <div
+          className="table__caption"
+        >
+          <p
+            data-testid="table-musictype"
+          />
+        </div>
+        <div
+          className="table__table"
+        >
+          <Loader
+            color="#ffffff"
+            css=""
+            loading={true}
+            margin={2}
+            size={15}
+          >
+            <EmotionCssPropInternal
+              __EMOTION_TYPE_PLEASE_DO_NOT_USE__="span"
+              css={
+                Array [
+                  "",
+                ]
+              }
+            >
+              <span
+                className="css-0"
+              >
+                <EmotionCssPropInternal
+                  __EMOTION_TYPE_PLEASE_DO_NOT_USE__="span"
+                  css={
+                    Object {
+                      "map": undefined,
+                      "name": "1njukjo",
+                      "next": Object {
+                        "name": "animation-1bzpvkt",
+                        "next": undefined,
+                        "styles": "@keyframes animation-1bzpvkt{
+  50% {transform: scale(0.75);opacity: 0.2}
+  100% {transform: scale(1);opacity: 1}
+}",
+                      },
+                      "styles": "
+      display: inline-block;
+      background-color: #ffffff;
+      width: 15px;
+      height: 15px;
+      margin: 2px;
+      border-radius: 100%;
+      animation: animation-1bzpvkt 0.7s 0s infinite linear;
+      animation-fill-mode: both;
+    ",
+                      "toString": [Function],
+                    }
+                  }
+                >
+                  <span
+                    className="css-1njukjo"
+                  />
+                </EmotionCssPropInternal>
+                <EmotionCssPropInternal
+                  __EMOTION_TYPE_PLEASE_DO_NOT_USE__="span"
+                  css={
+                    Object {
+                      "map": undefined,
+                      "name": "mhyaug",
+                      "next": Object {
+                        "name": "animation-1bzpvkt",
+                        "next": undefined,
+                        "styles": "@keyframes animation-1bzpvkt{
+  50% {transform: scale(0.75);opacity: 0.2}
+  100% {transform: scale(1);opacity: 1}
+}",
+                      },
+                      "styles": "
+      display: inline-block;
+      background-color: #ffffff;
+      width: 15px;
+      height: 15px;
+      margin: 2px;
+      border-radius: 100%;
+      animation: animation-1bzpvkt 0.7s 0.35s infinite linear;
+      animation-fill-mode: both;
+    ",
+                      "toString": [Function],
+                    }
+                  }
+                >
+                  <span
+                    className="css-mhyaug"
+                  />
+                </EmotionCssPropInternal>
+                <EmotionCssPropInternal
+                  __EMOTION_TYPE_PLEASE_DO_NOT_USE__="span"
+                  css={
+                    Object {
+                      "map": undefined,
+                      "name": "1njukjo",
+                      "next": Object {
+                        "name": "animation-1bzpvkt",
+                        "next": undefined,
+                        "styles": "@keyframes animation-1bzpvkt{
+  50% {transform: scale(0.75);opacity: 0.2}
+  100% {transform: scale(1);opacity: 1}
+}",
+                      },
+                      "styles": "
+      display: inline-block;
+      background-color: #ffffff;
+      width: 15px;
+      height: 15px;
+      margin: 2px;
+      border-radius: 100%;
+      animation: animation-1bzpvkt 0.7s 0s infinite linear;
+      animation-fill-mode: both;
+    ",
+                      "toString": [Function],
+                    }
+                  }
+                >
+                  <span
+                    className="css-1njukjo"
+                  />
+                </EmotionCssPropInternal>
+              </span>
+            </EmotionCssPropInternal>
+          </Loader>
+        </div>
+      </TableData>
+      <Pagination
+        genrePerPage={5}
+        paginate={[Function]}
+        totalGenre={0}
+      >
+        <nav
+          className="pagination__nav"
+        >
+          <ul
+            className="pagination"
+          />
+        </nav>
+      </Pagination>
+    </div>
+  </div>
+</Table>
+`;

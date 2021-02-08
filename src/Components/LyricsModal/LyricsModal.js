@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
-import "../assets/css/LyricsModal.css";
+import "./LyricsModal.css";
 import "bootstrap";
 import "popper.js";
-import { getLyrics } from "../services/API/axios";
-import logo from "./../assets/Dog-swimming.png";
+import { getLyrics } from "../../services/API/axios";
+import logo from "../../assets/Dog-swimming.png";
 import BeatLoader from "react-spinners/BeatLoader";
 import ReactModal from "react-modal";
 
